@@ -7,7 +7,7 @@ module.exports = {
   	'./styles/main.scss'
   ],
   output: {
-  	filename: 'dist/bundle.js'
+  	filename: 'build/bundle.js'
   },
   module: {
   	rules: [
@@ -30,7 +30,7 @@ module.exports = {
   		algoliasearch: 'algoliasearch'
   	}),
   	new ExtractTextPlugin({
-  		filename: 'dist/bundle.css',
+  		filename: 'build/bundle.css',
   		allChunks: true
   	})
   ]
