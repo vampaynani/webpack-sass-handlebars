@@ -1,0 +1,23 @@
+{{#each recipes}}
+<article class="card four columns">
+    <div class="card__image" style="background-image: url({{img}});">
+
+    </div>
+    <h2 class="card__header">{{title}}</h2>
+    <dl class="card__stats clearfix">
+    <div class="card__stat">
+        <dt><i class="fa fa-heart" aria-hidden="true"></i>Calories</dt>
+        <dd>541</dd>
+    </div>
+    <div class="card__stat">
+        <dt><i class="fa fa-clock-o" aria-hidden="true"></i>Time</dt>
+        <dd>{{ttime}}</dd>
+    </div>
+    <div class="card__stat">
+        <dt>Ingredients</dt>
+        <dd>11</dd>
+    </div>
+    </dl>
+    <a href="{{url}}" class="card__link" target="_blank">on {{blog}}</a>
+</article>
+{{/each}}
