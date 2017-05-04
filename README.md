@@ -16,7 +16,7 @@ The _Handlebars_ files goes inside the templates directory.
 `npm run dev`
 
 2. Go to the url:
-`http://localhost:8080/build/`
+`http://localhost:8080/webpack-dev-server/`
 
 3. Start to code and see the magic happens.
 

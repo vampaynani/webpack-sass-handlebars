@@ -1,5 +1,7 @@
+var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -7,11 +9,12 @@ module.exports = {
   	'./styles/main.scss'
   ],
   output: {
-  	filename: 'build/bundle.js'
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js'
   },
   module: {
   	rules: [
-  		{
+      {
   			test: /\.hbs$/,
   			use: 'handlebars-loader'
   		},
@@ -30,8 +33,12 @@ module.exports = {
   		algoliasearch: 'algoliasearch'
   	}),
   	new ExtractTextPlugin({
-  		filename: 'build/bundle.css',
+  		filename: 'bundle.css',
   		allChunks: true
-  	})
+  	}),
+    new HtmlWebpackPlugin({
+      template: 'templates/index.hbs',
+      filename: 'index.html'
+    })
   ]
 };
